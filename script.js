@@ -39,7 +39,7 @@ console.log("hello");*/
 //   console.log("Hello World");
 // });
 // Get the modal
-var modal = document.querySelector('.modal');
+var modal = document.querySelector('.modal-text');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -50,7 +50,7 @@ window.onclick = function(event) {
 
 function resizeHeaderOnScroll() {
   const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-  shrinkOn = 100,
+  shrinkOn = 200,
   headerEl = document.querySelector('.modal-button');
 
   if (distanceY > shrinkOn) {
@@ -117,7 +117,7 @@ $(window).scroll(function () {
 
   if (whileTrue && $(window).scrollTop() > ($(document).height() * 0.75) - $(window).height()) {
     whileTrue = fasle;
-    $(".modal").addClass()
+    $("modal").addClass()
   }
 
 });
@@ -145,13 +145,4 @@ $(document).ready(function(){
       });
     } // End if
   });
-});
-$(document).ready(function(){
-  $(".parallax").css("border");
-
-
-$(window).scroll(function (){
-$(".parallax").each(function () {
-  if ($(this.offset().top <= $(window)))
-})
 });
