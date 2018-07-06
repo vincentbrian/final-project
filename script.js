@@ -15,29 +15,29 @@ wrappers.forEach(function(el)) {
 }
 console.log("hello");*/
 /*    - - - - - - - - - - - -  modal   -- - - - - - - -   */
-// var modal = document.querySelector(".modal");
-// var xButton = document.querySelector(".modal .overlay");
-// var modalButton = document.querySelector(".modal-button");
-// var modalContent = document.querySelector(".modal-text");
-//
-// modalButton.addEventListener("click", addShow);
-// modal.addEventListener("click", removeShow);
-//
-// function addShow() {
-// modal.classList.add("show");
-// }
-// function removeShow() {
-// modal.classList.remove("show");
-// }
-//
-//
-// var wrapper = document.querySelectorAll('.wrapper');
-//
-// var maxHeight = 0;
-//
-// wrapper.forEach(function() {
-//   console.log("Hello World");
-// });
+var modal = document.querySelector(".modal");
+var xButton = document.querySelector(".modal .overlay");
+var modalButton = document.querySelector(".modal-button");
+var modalContent = document.querySelector(".modal-text");
+
+modalButton.addEventListener("click", addShow);
+modal.addEventListener("click", removeShow);
+
+function addShow() {
+modal.classList.add("show");
+}
+function removeShow() {
+modal.classList.remove("show");
+}
+
+
+var wrapper = document.querySelectorAll('.wrapper');
+
+var maxHeight = 0;
+
+wrapper.forEach(function() {
+  console.log("Hello World");
+});
 // Get the modal
 var modal = document.querySelector('.modal-text');
 
@@ -47,7 +47,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
+// Shrink nav on Scroll
 function resizeHeaderOnScroll() {
   const distanceY = window.pageYOffset || document.documentElement.scrollTop,
   shrinkOn = 200,
@@ -104,45 +104,64 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 };
 /*    - - - - - - - - - - - -  j query   -- - - - - - - -   */
-$(document).ready(function (){
-  var whiteTrue = true;
+// $(document).ready(function (){
+//   var whiteTrue = true;
+//
+// $(window).scroll(function () {
+//
+//   if ($(window).scrollTop() > 0) {
+//     $("nav").addClass("sticky");
+//   } else {
+//     $("nav").remove("sticky");
+//   }
+//
+//   if (whileTrue && $(window).scrollTop() > ($(document).height() * 0.75) - $(window).height()) {
+//     whileTrue = fasle;
+//     $("modal").addClass()
+//   }
+//
+// });
+// });
+// $(document).ready(function(){
+//   // Add smooth scrolling to all links
+//   $("a").on('click', function(event) {
+//
+//     // Make sure this.hash has a value before overriding default behavior
+//     if (this.hash !== $('.scroll')) {
+//       // Prevent default anchor click behavior
+//       event.preventDefault();
+//
+//       // Store hash
+//       var hash = this.hash;
+//
+//       // Using jQuery's animate() method to add smooth page scroll
+//       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+//       $('html, body').animate({
+//         scrollTop: $(hash).offset().top
+//       }, 1000, function(){
+//
+//         // Add hash (#) to URL when done scrolling (default click behavior)
+//         window.location.hash = hash;
+//       });
+//     } // End if
+//   });
+// });
 
-$(window).scroll(function () {
-
-  if ($(window).scrollTop() > 0) {
-    $("nav").addClass("sticky");
-  } else {
-    $("nav").remove("sticky");
-  }
-
-  if (whileTrue && $(window).scrollTop() > ($(document).height() * 0.75) - $(window).height()) {
-    whileTrue = fasle;
-    $("modal").addClass()
-  }
-
-});
-});
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
+// $(document).ready(function(){
+//
+//   var scrollLink = $('.scroll');
+//
+//   scrollLink.click(function(e) {
+//     e.preventDefault();
+//     $('body,html').animate({
+//       scrollTop: $(this.hash).offset().bottom
+//     }, 2000 );
+//   })
+//
+// })
+$(document).scroll(function(e) {
+    var scrollPos = $(this).scrollTop{};
+    if (scrollPos < 100 {
+      $('.scroll')
+    })
+})
