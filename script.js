@@ -15,52 +15,52 @@ wrappers.forEach(function(el)) {
 }
 console.log("hello");*/
 /*    - - - - - - - - - - - -  modal   -- - - - - - - -   */
-var modal = document.querySelector(".modal");
-var xButton = document.querySelector(".modal .overlay");
-var modalButton = document.querySelector(".modal-button");
-var modalContent = document.querySelector(".modal-text");
-
-modalButton.addEventListener("click", addShow);
-modal.addEventListener("click", removeShow);
-
-function addShow() {
-modal.classList.add("show");
-}
-function removeShow() {
-modal.classList.remove("show");
-}
-
-
-var wrapper = document.querySelectorAll('.wrapper');
-
-var maxHeight = 0;
-
-wrapper.forEach(function() {
-  console.log("Hello World");
-});
-// Get the modal
-var modal = document.querySelector('.modal-text');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-// Shrink nav on Scroll
-function resizeHeaderOnScroll() {
-  const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-  shrinkOn = 200,
-  headerEl = document.querySelector('.modal-button');
-
-  if (distanceY > shrinkOn) {
-    headerEl.classList.add('small');
-  } else {
-    headerEl.classList.remove('small');
-  }
-}
-
-window.addEventListener('scroll', resizeHeaderOnScroll);
+// var modal = document.querySelector(".modal");
+// var xButton = document.querySelector(".modal .overlay");
+// var modalButton = document.querySelector(".modal-button");
+// var modalContent = document.querySelector(".modal-text");
+//
+// modalButton.addEventListener("click", addShow);
+// modal.addEventListener("click", removeShow);
+//
+// function addShow() {
+// modal.classList.add("show");
+// }
+// function removeShow() {
+// modal.classList.remove("show");
+// }
+//
+//
+// var wrapper = document.querySelectorAll('.wrapper');
+//
+// var maxHeight = 0;
+//
+// wrapper.forEach(function() {
+//   console.log("Hello World");
+// });
+// // Get the modal
+// var modal = document.querySelector('.modal-text');
+//
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+// // Shrink nav on Scroll
+// function resizeHeaderOnScroll() {
+//   const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+//   shrinkOn = 200,
+//   headerEl = document.querySelector('.modal-button');
+//
+//   if (distanceY > shrinkOn) {
+//     headerEl.classList.add('small');
+//   } else {
+//     headerEl.classList.remove('small');
+//   }
+// }
+//
+// window.addEventListener('scroll', resizeHeaderOnScroll);
 
 // var nav = document.querySelector('.modal-button');
 //
@@ -77,32 +77,32 @@ window.addEventListener('scroll', resizeHeaderOnScroll);
 
 
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-};
+// var slideIndex = 1;
+// showSlides(slideIndex);
+//
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+//
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+//
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+// };
 /*    - - - - - - - - - - - -  j query   -- - - - - - - -   */
 // $(document).ready(function (){
 //   var whiteTrue = true;
@@ -159,9 +159,15 @@ function showSlides(n) {
 //   })
 //
 // })
-$(document).scroll(function(e) {
-    var scrollPos = $(this).scrollTop{};
-    if (scrollPos < 100 {
-      $('.scroll')
-    })
+// $(document).scroll(function(e) {
+//     var scrollPos = $(this).scrollTop
+//     if (scrollPos < 100) {
+//       $('.scroll')
+//     };
+// })
+
+
+$('.scroll').on('click', function (e){
+  e.preventDefault();
+  $("html, body").animate({scrollTop: 0}, 1000);
 })
